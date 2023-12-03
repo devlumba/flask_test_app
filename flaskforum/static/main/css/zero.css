@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+	background: #03fcc2;
+    height: 100%;
+    width: 100%;
+}
+header{
+    height: 4.4vh;
+    width: 100%;
+    background: #333;
+    color: #03fcc2;
+    text-decoration: none;
+    margin: 0px 0px 20px 0;
+}
+header h3{
+    font-size: 20px;
+    float: left;
+}
+header a:hover{
+    color: #03fcc2;
+    text-decoration: none;
+}
+header a{
+    margin: 0 5px;
+    color: #03fcc2;
+    text-decoration: none;
+}
+#home, #about{
+    float:left;
+}
+#login, #reg, #logout, #account, #newpost{
+    float: right;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+article{
+    color: #fff;
+    background: #333;
+    padding: 10px;
+    margin: 10px;
+    width: 35vw;
+    border-radius: 15px;
+}
+article a{
+    color: #fff;
+}
+article a:hover{
+    color: #03fcc2;
+    transition: 1s;
+}
+article .user_date{
+    border-bottom: solid 1px #03fcc2;
+}
+
+.reglogforma{
+    width: 600px;
+    color: #fff;
+    background: #333;
+    padding: 10px;
+    margin: 10px;
+    width: 35vw;
+    border-radius: 15px;
+}
+a {
+    color: #333;
+}
+.reglogforma a{
+    color: #bab5b5;
+}
+
+.accountinfo {
+    color: #fff;
+    background: #333;
+    padding: 10px;
+    margin: 10px;
+    width: 57vw;
+    height: 40vw;
+    border-radius: 15px;
+}
+
+.accountinfoview {
+    float: left;
+    color: #fff;
+    background: #333;
+    padding: 10px;
+    width: 57vw;
+    border-radius: 15px;
+}
+
+.accountimage{
+    float: left;
+    height: 240px;
+    width: 240px;
+    margin: 13px;
+    border-radius: 15px;
+}
+.changeinfo{
+    margin: 200px;
+}
+.postimg {
+    height: 15px;
+    width: 15px;
+
+}
+.postimg1 {
+    height: 40px;
+    width: 40px;
+    float: left;
+
+}
+.postdelete, .postupdate{
+    float:right;
+    margin: 10px;
+}
+.userarticle{
+    float: right;
+    position: relative;
+    right: 120px;
+}
+.page_nums{
+    float:left;
+    margin: 10px;
+}
+.page_nums_user{
+    float: left;
+    position: relative;
+    top: 190px;
+}

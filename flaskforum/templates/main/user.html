@@ -1,0 +1,46 @@
+{% extends 'main/zero.html' %}
+{% block bud %}
+<div class="accountinfoview">
+    <div class="">
+    <img class="accountimage" src="{{ url_for('static', filename='profile_pics/' + user.image_file) }}"/>
+    <div class="media-body">
+    <h2 class="account-heading">{{ user.username }}</h2>
+    <h2 class="account-heading">{{ user.email }}</h2>
+    <small class="text-muted">Posts by {{ user.username }} - {{ posts.total }}</small>
+    {% if user == current_user %}
+        <a href="{{ url_for('users.account') }}">
+            <button class="btn btn-secondary">Edit</button>
+        </a>
+        <a href="{{ url_for('users.password_change_manually', user_id=user.id) }}">
+            <button class="btn btn-secondary">Change Password</button>
+        </a>
+    {% endif %}
+    </div>
+    <div>
+        {% for i in posts.items %}
+            <article class="userarticle">
+                <div>
+                    <div class="user_date">
+                        <small class="text-muted">{{ i.date_posted.strftime("%m/%d/%Y, %H:%M") }}</small>
+                    </div>
+                    <h3><a href="{{ url_for('posts.post', post_id=i.id) }}">{{ i.title }}</a></h3>
+                    <p>{{ i.content }}</p>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+        <div class="page_nums_user">
+            {% for page in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                {% if page %}
+                    {% if posts.page != page %}
+                        <a class='btn btn-info' href="{{ url_for('users.userview', user_id=user.id, page=page) }}">{{ page }}</a>
+                    {% else %}
+                        <button class="btn btn-secondary">{{ page }}</button>
+                    {% endif %}
+                {% else %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock bud %}
